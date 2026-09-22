@@ -1,0 +1,8 @@
+.feature-grid {
+    display: grid;
+    gap: 22px;
+}
+
+.feature-grid {
+    grid-template-columns: repeat(3, 1fr);
+}
