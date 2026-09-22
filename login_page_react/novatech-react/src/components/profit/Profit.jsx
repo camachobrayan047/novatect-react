@@ -1,6 +1,26 @@
 import './profit.css';
 import ProfitCard from '../shared/profit-card/ProfitCard.jsx';
 
+const futures = [
+    {
+        icon: "01",
+        title: "Título de la tarjeta",
+        description: "Descripción de la tarjeta de beneficio."
+    },
+    {
+        icon: "02",
+        title: "Segunda tarjeta de beneficio",
+        description: "Descripción de la segunda tarjeta de beneficio."
+    },
+    {
+        icon: "03",
+        title: "Tercera tarjeta de beneficio",
+        description: "Descripción de la tercera tarjeta de beneficio."
+    }
+];
+
+
+
 function Profit() {
     return (
         <section className="section" id="beneficios">
@@ -12,21 +32,9 @@ function Profit() {
                 </div>
 
                 <div className="feature-grid">
-                    <ProfitCard
-                        icon="01"
-                        title="Título de la tarjeta"
-                        description="Descripción de la tarjeta de beneficio."
-                    />
-                    <ProfitCard
-                        icon="02"
-                        title="Otra tarjeta de beneficio"
-                        description="Descripción de la segunda tarjeta de beneficio."
-                    />
-                    <ProfitCard
-                        icon="03"
-                        title="Tercera tarjeta de beneficio"
-                        description="Descripción de la tercera tarjeta de beneficio."
-                    />
+                    {futures.map((feature) => (
+                        <ProfitCard icon={feature.icon} title={feature.title} description={feature.description} />
+                    ))}
                 </div>
             </div>
         </section>
