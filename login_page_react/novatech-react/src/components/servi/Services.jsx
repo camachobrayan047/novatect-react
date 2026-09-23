@@ -30,33 +30,40 @@ function Services() {
     ];
 
     return (
-        <section className="services-container">
-            { }
-            <div className="services-header">
-                <div className="header-left">
-                    <span className="subtitle">SERVICIOS</span>
-                    <h2>Todo lo que necesitas para operar mejor.</h2>
-                </div>
-                <div className="header-right">
-                    <p>Soluciones modulares que puedes adoptar de forma progresiva según el momento de tu negocio.</p>
-                </div>
-            </div>
+        <section className="services-section" id="servicios">
+            {/* Contenedor global alineado con Hero */}
+            <div className="container">
 
-            { }
-            <div className="services-grid">
-                {servicios.map((item) => (
-                    <div key={item.id} className="service-card">
-                        <div className="card-header">
-                            <span className="card-number">{item.id}</span>
-                            <span className="card-tag">{item.tag}</span>
-                        </div>
-                        <h3>{item.titulo}</h3>
-                        <p className="card-description">{item.descripcion}</p>
-                        <a href="#" className="card-link">
-                            Explorar solución <span>&rarr;</span>
-                        </a>
+                {/* Encabezado de la sección */}
+                <div className="services-header">
+                    <div className="header-left">
+                        <span className="eyebrow">SERVICIOS</span>
+                        <h2>Todo lo que necesitas para operar mejor.</h2>
                     </div>
-                ))}
+                    <div className="header-right">
+                        <p className="services-subtitle">
+                            Soluciones modulares que puedes adoptar de forma progresiva según el momento de tu negocio.
+                        </p>
+                    </div>
+                </div>
+
+                {/* Grilla de Tarjetas */}
+                <div className="services-grid">
+                    {servicios.map((item) => (
+                        <div key={item.id} className="service-card">
+                            <div className="card-top">
+                                <span className="card-number">{item.id}</span>
+                                <span className="card-tag">{item.tag}</span>
+                            </div>
+                            <h3>{item.titulo}</h3>
+                            <p className="card-desc">{item.descripcion}</p>
+                            <a href="#contacto" className="card-link">
+                                Explorar solución <span>&rarr;</span>
+                            </a>
+                        </div>
+                    ))}
+                </div>
+
             </div>
         </section>
     );
